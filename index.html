@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Magical Love Journey</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            color: #fff;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .chapter {
+            display: none;
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            padding: 100px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .active {
+            display: block;
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .magic-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .floating-stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+
+        #confetti {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Stars Effect -->
+    <div class="floating-stars" id="stars"></div>
+
+    <!-- Chapter 1 – Welcome -->
+    <div id="chapter1" class="chapter active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Hey Tiny tini, My Dearest Star ✨</h1>
+        <p>Today, I’ve created something magical just for you.<br>
+           A journey of love, admiration, and gratitude…<br>
+           Let’s begin this special story together.</p>
+        <button class="magic-btn" onclick="nextChapter(2)">Wave the Wand →</button>
+    </div>
+
+    <!-- Chapter 2 – Her Kindness as a Doctor -->
+    <div id="chapter2" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1588776814546-0f0b7d16553f?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Kindness Heals Souls ❤️</h1>
+        <p>Every day, you don the white coat and heal not just bodies, but hearts.<br>
+           Your gentle touch and compassion remind me that the world is full of hope because of you.</p>
+        <button class="magic-btn" onclick="nextChapter(3)">Next Magic →</button>
+    </div>
+
+    <!-- Chapter 3 – Her Humor and Smile -->
+    <div id="chapter3" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Smile Lights Up My World 😄</h1>
+        <p>Even in the busiest hospital shifts, you find ways to laugh,<br>
+           bringing joy to everyone around.<br>
+           Your laughter is my favorite melody and your smile my sweetest treasure.</p>
+        <button class="magic-btn" onclick="nextChapter(4)">Next Spell →</button>
+    </div>
+
+    <!-- Chapter 4 – Her Strength and Resilience -->
+    <div id="chapter4" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Strength is My Inspiration 🚀</h1>
+        <p>Long hours, tough clases, endless challenges…<br>
+           Yet you remain strong, brave, and beautiful.<br>
+           You inspire me to be a better person every single day.</p>
+        <button class="magic-btn" onclick="nextChapter(5)">Next →</button>
+    </div>
+
+    <!-- Chapter 5 – Her Dedication -->
+    <div id="chapter5" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1588776814546-0f0b7d16553f?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Dedication is Unmatched 🌟</h1>
+        <p>Every patient Would know they are in the safest hands when you’re around.<br>
+           Your tireless commitment shows how deeply you care.</p>
+        <button class="magic-btn" onclick="nextChapter(6)">Next →</button>
+    </div>
+
+    <!-- Chapter 6 – Her Compassion -->
+    <div id="chapter6" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Compassion Warms Hearts 💖</h1>
+        <p>Even in the hardest times, you radiate kindness and empathy.<br>
+           The world feels softer because of you.</p>
+        <button class="magic-btn" onclick="nextChapter(7)">Next →</button>
+    </div>
+
+    <!-- Chapter 7 – Her Intelligence -->
+    <div id="chapter7" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Intelligence Guides the Way 🧠</h1>
+        <p>Brilliant decisions under pressure prove how extraordinary you are.<br>
+           You are truly an inspiration.</p>
+        <button class="magic-btn" onclick="nextChapter(8)">Next →</button>
+    </div>
+
+    <!-- Chapter 8 – Her Patience -->
+    <div id="chapter8" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1588776814546-0f0b7d16553f?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Patience is Legendary 🌱</h1>
+        <p>You calmly handle every challenge, with grace and strength.<br>
+           A true example of serenity in a chaotic world.</p>
+        <button class="magic-btn" onclick="nextChapter(9)">Next →</button>
+    </div>
+
+    <!-- Chapter 9 – Her Smile Again -->
+    <div id="chapter9" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Smile is My Sunshine ☀️</h1>
+        <p>It’s not just beautiful; it uplifts me every single day.<br>
+           My favorite sight in this world.</p>
+        <button class="magic-btn" onclick="nextChapter(10)">Next →</button>
+    </div>
+
+    <!-- Chapter 10 – Her Love -->
+    <div id="chapter10" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Your Love Is My Greatest Treasure ❤️</h1>
+        <p>Beyond the white coat and long shifts, your love is my safe haven.<br>
+           The sweetest part of my life.</p>
+        <button class="magic-btn" onclick="nextChapter(11)">Final Wish →</button>
+    </div>
+
+    <!-- Chapter 11 – Ultimate Wish -->
+    <div id="chapter11" class="chapter" style="background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1350&q=80');">
+        <h1>Happy Birthday, My Love! 🎂</h1>
+        <p>May your day be as beautiful as you are.<br>
+           I love you more than words can say.<br>
+           Thank you for being my everything.</p>
+        <div id="confetti">🎉💖🎊</div>
+        <button class="magic-btn" onclick="nextChapter(1)">Start Over</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+        function nextChapter(chapterNumber) {
+            const currentChapter = document.querySelector('.chapter.active');
+            if (currentChapter) {
+                currentChapter.classList.remove('active');
+            }
+
+            const nextChapterElement = document.getElementById('chapter' + chapterNumber);
+            if (nextChapterElement) {
+                nextChapterElement.classList.add('active');
+            }
+
+            if (chapterNumber === 11) {
+                // Trigger confetti
+                confetti({
+                    particleCount: 200,
+                    spread: 100,
+                    origin: { y: 0.6 }
+                });
+            }
+        }
+
+        // Create floating stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDuration = `${(Math.random() * 3) + 2}s`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                starsContainer.appendChild(star);
+            }
+        }
+
+        window.onload = createStars;
+    </script>
+</body>
+
+</html>
+
